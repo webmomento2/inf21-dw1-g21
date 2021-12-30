@@ -1,0 +1,826 @@
+openapi: 3.0.0
+info:
+  title: Entretenimento
+  description: Guarde suas mídias favoritas
+  version: 0.0.1
+servers:
+- url: http://localhost:8080
+  description: My localhost
+  variables:
+    basePath:
+      default: /
+paths:
+  /filmes:
+    get:
+      tags:
+      - FilmesController
+      summary: Retrieve filmes
+      operationId: retrieveFilmes
+      responses:
+        "200":
+          description: Array of Filmes model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Filme'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Filmes
+                items:
+                  $ref: '#/components/schemas/Filme'
+      x-swagger-router-controller: FilmesController
+    post:
+      tags:
+      - FilmesController
+      summary: Create filme
+      operationId: createFilme
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Filme'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Filme'
+      responses:
+        "200":
+          description: Creat a Filme model instance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Filme'
+      x-swagger-router-controller: FilmesController
+  /filmes/{id}:
+    get:
+      tags:
+      - FilmesController
+      summary: Retrieve filme
+      operationId: retrieveFilme
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve Filme id 1
+            value: 1
+          two:
+            summary: Retrieve Filme id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Filme'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: FilmesController
+    put:
+      tags:
+      - FilmesController
+      summary: Update filme
+      operationId: updateFilme
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Update Filme id 1
+            value: 1
+          two:
+            summary: Update Filme id 2
+            value: 2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Filme'
+            examples:
+              FilmeExample01:
+                $ref: '#/components/examples/FilmeExemplo01'
+              FilmeExample02:
+                $ref: '#/components/examples/FilmeExemplo02'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Filme PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: FilmesController
+    delete:
+      tags:
+      - FilmesController
+      summary: Delete filme
+      operationId: deleteFilme
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete Filme id 1
+            value: 1
+          two:
+            summary: Delete Filme id 2
+            value: 2
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: id not found
+      x-swagger-router-controller: FilmesController
+  /series:
+    get:
+      tags:
+      - SeriesController
+      summary: Retrieve series
+      operationId: retrieveSeries
+      responses:
+        "200":
+          description: Array of Series model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Serie'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Series
+                items:
+                  $ref: '#/components/schemas/Serie'
+      x-swagger-router-controller: SeriesController
+    post:
+      tags:
+      - SeriesController
+      summary: Create serie
+      operationId: createSerie
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Serie'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Serie'
+      responses:
+        "200":
+          description: Creat a Serie model instance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Serie'
+      x-swagger-router-controller: SeriesController
+  /series/{id}:
+    get:
+      tags:
+      - SeriesController
+      summary: Retrieve serie
+      operationId: retrieveSerie
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve Serie id 1
+            value: 1
+          two:
+            summary: Retrieve Serie id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Serie'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: SeriesController
+    put:
+      tags:
+      - SeriesController
+      summary: Update serie
+      operationId: updateSerie
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Update Serie id 1
+            value: 1
+          two:
+            summary: Update Serie id 2
+            value: 2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Serie'
+            examples:
+              FilmeExample01:
+                $ref: '#/components/examples/SerieExemplo01'
+              FilmeExample02:
+                $ref: '#/components/examples/SerieExemplo02'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Serie PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: SeriesController
+    delete:
+      tags:
+      - SeriesController
+      summary: Delete serie
+      operationId: deleteSerie
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete Serie id 1
+            value: 1
+          two:
+            summary: Delete Serie id 2
+            value: 2
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: id not found
+      x-swagger-router-controller: SeriesController
+  /livros:
+    get:
+      tags:
+      - LivrosController
+      summary: Retrieve livros
+      operationId: retrieveLivros
+      responses:
+        "200":
+          description: Array of Livros model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Livro'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Livros
+                items:
+                  $ref: '#/components/schemas/Livro'
+      x-swagger-router-controller: LivrosController
+    post:
+      tags:
+      - LivrosController
+      summary: Create livro
+      operationId: createLivro
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Livro'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Livro'
+      responses:
+        "200":
+          description: Creat a Livro model instance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Livro'
+      x-swagger-router-controller: LivrosController
+  /livros/{id}:
+    get:
+      tags:
+      - LivrosController
+      summary: Retrieve livro
+      operationId: retrieveLivro
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve Livro id 1
+            value: 1
+          two:
+            summary: Retrieve Livro id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Livro'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: LivrosController
+    put:
+      tags:
+      - LivrosController
+      summary: Update livro
+      operationId: updateLivro
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Update Livro id 1
+            value: 1
+          two:
+            summary: Update Livro id 2
+            value: 2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Livro'
+            examples:
+              FilmeExample01:
+                $ref: '#/components/examples/LivroExemplo01'
+              FilmeExample02:
+                $ref: '#/components/examples/LivroExemplo02'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Livro PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: LivrosController
+    delete:
+      tags:
+      - LivrosController
+      summary: Delete livro
+      operationId: deleteLivro
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete Livro id 1
+            value: 1
+          two:
+            summary: Delete Livro id 2
+            value: 2
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: id not found
+      x-swagger-router-controller: LivrosController
+  /cursos:
+    get:
+      tags:
+      - CursosController
+      summary: Retrieve cursos
+      operationId: retrieveCursos
+      responses:
+        "200":
+          description: Array of Cursos model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Curso'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Cursos
+                items:
+                  $ref: '#/components/schemas/Curso'
+      x-swagger-router-controller: CursosController
+    post:
+      tags:
+      - CursosController
+      summary: Create curso
+      operationId: createCurso
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Curso'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Curso'
+      responses:
+        "200":
+          description: Creat a Curso model instance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Curso'
+      x-swagger-router-controller: CursosController
+  /cursos/{id}:
+    get:
+      tags:
+      - CursosController
+      summary: Retrieve curso
+      operationId: retrieveCurso
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve Curso id 1
+            value: 1
+          two:
+            summary: Retrieve Curso id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Curso'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: CursosController
+    put:
+      tags:
+      - CursosController
+      summary: Update curso
+      operationId: updateCurso
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Update Curso id 1
+            value: 1
+          two:
+            summary: Update Curso id 2
+            value: 2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Curso'
+            examples:
+              FilmeExample01:
+                $ref: '#/components/examples/CursoExemplo01'
+              FilmeExample02:
+                $ref: '#/components/examples/CursoExemplo02'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Curso PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: CursosController
+    delete:
+      tags:
+      - CursosController
+      summary: Delete curso
+      operationId: deleteCurso
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete Curso id 1
+            value: 1
+          two:
+            summary: Delete Curso id 2
+            value: 2
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: id not found
+      x-swagger-router-controller: CursosController
+components:
+  schemas:
+    Filme:
+      title: Filme
+      required:
+      - ano
+      - assistido
+      - genero
+      - nome
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        nome:
+          type: string
+        ano:
+          type: integer
+          format: int64
+        duracao:
+          type: string
+        genero:
+          type: string
+        produtora:
+          type: string
+        diretor:
+          type: string
+        assistido:
+          type: string
+        adaptado:
+          type: integer
+          format: int64
+      additionalProperties: false
+      example:
+        assistido: assistido
+        ano: 6
+        genero: genero
+        nome: nome
+        id: 0
+        duracao: duracao
+        diretor: diretor
+        adaptado: adaptado
+        produtora: produtora
+    Serie:
+      title: Serie
+      required:
+      - ano
+      - assistido
+      - genero
+      - nome
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        nome:
+          type: string
+        ano:
+          type: integer
+          format: int64
+        temporadas:
+          type: integer
+          format: int64
+        genero:
+          type: string
+        produtora:
+          type: string
+        assistido:
+          type: string
+      additionalProperties: false
+      example:
+        assistido: assistido
+        ano: 6
+        temporadas: 1
+        genero: genero
+        nome: nome
+        id: 0
+        produtora: produtora
+    Livro:
+      title: Livro
+      required:
+      - escritor
+      - genero
+      - lido
+      - nome
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        nome:
+          type: string
+        edicao:
+          type: integer
+          format: int64
+        paginas:
+          type: integer
+          format: int64
+        genero:
+          type: string
+        editora:
+          type: string
+        escritor:
+          type: string
+        lido:
+          type: string
+      additionalProperties: false
+      example:
+        escritor: escritor
+        paginas: 1
+        genero: genero
+        nome: nome
+        lido: lido
+        id: 0
+        edicao: 6
+        editora: editora
+    Curso:
+      title: Curso
+      required:
+      - assistido
+      - materia
+      - professor
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        materia:
+          type: string
+        videos:
+          type: integer
+          format: int64
+        professor:
+          type: string
+        assistido:
+          type: string
+      additionalProperties: false
+      example:
+        professor: professor
+        assistido: assistido
+        materia: materia
+        videos: 6
+        id: 0
+  examples:
+    FilmeExemplo01:
+      value:
+        id: 1
+        nome: Exemplo 01
+        ano: 2000
+        genero: comédia
+        assistido: sim
+    FilmeExemplo02:
+      value:
+        id: 1
+        nome: Exemplo 02
+        ano: 1990
+        genero: drama
+        assistido: não
+    SerieExemplo01:
+      value:
+        id: 1
+        nome: Exemplo 01
+        ano: 2000
+        genero: comédia
+        assistido: sim
+    SerieExemplo02:
+      value:
+        id: 1
+        nome: Exemplo 02
+        ano: 1990
+        genero: drama
+        assistido: não
+    LivroExemplo01:
+      value:
+        id: 1
+        nome: Exemplo 01
+        genero: drama
+        escritor: Fulano
+        lido: nao
+    LivroExemplo02:
+      value:
+        id: 1
+        nome: Exemplo 02
+        genero: drama
+        escritor: Fulano
+        lido: nao
+    CursoExemplo01:
+      value:
+        id: 1
+        materia: Exemplo 01
+        professor: Fulano
+        assistido: nao
+    CursoExemplo02:
+      value:
+        id: 1
+        materia: Exemplo 02
+        professor: Fulano
+        assistido: nao
