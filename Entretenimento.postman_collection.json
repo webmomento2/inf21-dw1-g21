@@ -1,0 +1,2382 @@
+{
+	"info": {
+		"_postman_id": "e2a56fb2-afbd-44f4-aa03-77de0dbae261",
+		"name": "Entretenimento",
+		"description": "Guarde suas mídias favoritas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "filmes",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve filme",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/filmes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"filmes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"ano\": -60491830,\n \"assistido\": \"enim e\",\n \"genero\": \"irure fugiat reprehenderit\",\n \"nome\": \"esse in commodo est\",\n \"id\": -58084782,\n \"duracao\": \"ut deserunt sunt\",\n \"produtora\": \"sunt ea commodo elit\",\n \"diretor\": \"sunt consequat fug\",\n \"adaptado\": -12466046\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update filme",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/filmes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"filmes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete filme",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/filmes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"filmes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/filmes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"filmes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve filmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/filmes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"filmes"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Filmes model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/filmes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"filmes"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"ano\": -89975031,\n  \"assistido\": \"pariatur enim ad\",\n  \"genero\": \"tempor ex ipsum dolor\",\n  \"nome\": \"consequat qui aute\",\n  \"id\": -3837944,\n  \"duracao\": \"laboris commodo minim enim\",\n  \"produtora\": \"esse dolore sunt eu\",\n  \"diretor\": \"reprehenderit non esse\",\n  \"adaptado\": 73754791\n },\n {\n  \"ano\": 9700814,\n  \"assistido\": \"aute fugiat\",\n  \"genero\": \"quis Lorem\",\n  \"nome\": \"sint null\",\n  \"id\": -47127024,\n  \"duracao\": \"adipisicing\",\n  \"produtora\": \"esse adipisicing\",\n  \"diretor\": \"commodo esse ipsum d\",\n  \"adaptado\": -7536617\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create filme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ano\": -60491830,\n    \"assistido\": \"enim e\",\n    \"genero\": \"irure fugiat reprehenderit\",\n    \"nome\": \"esse in commodo est\",\n    \"id\": -58084782,\n    \"duracao\": \"ut deserunt sunt\",\n    \"produtora\": \"sunt ea commodo elit\",\n    \"diretor\": \"sunt consequat fug\",\n    \"adaptado\": -12466046\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/filmes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"filmes"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Creat a Filme model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ano\": -60491830,\n    \"assistido\": \"enim e\",\n    \"genero\": \"irure fugiat reprehenderit\",\n    \"nome\": \"esse in commodo est\",\n    \"id\": -58084782,\n    \"duracao\": \"ut deserunt sunt\",\n    \"produtora\": \"sunt ea commodo elit\",\n    \"diretor\": \"sunt consequat fug\",\n    \"adaptado\": -12466046\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/filmes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"filmes"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"ano\": -60491830,\n \"assistido\": \"enim e\",\n \"genero\": \"irure fugiat reprehenderit\",\n \"nome\": \"esse in commodo est\",\n \"id\": -58084782,\n \"duracao\": \"ut deserunt sunt\",\n \"produtora\": \"sunt ea commodo elit\",\n \"diretor\": \"sunt consequat fug\",\n \"adaptado\": -12466046\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "series",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve serie",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/series/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"series",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"assistido\": \"assistido\",\n \"ano\": 6,\n \"temporadas\": 1,\n \"genero\": \"genero\",\n \"nome\": \"nome\",\n \"id\": 0,\n \"produtora\": \"produtora\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update serie",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/series/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"series",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"ano\": 2000,\n    \"genero\": \"comédia\",\n    \"assistido\": \"sim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete serie",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/series/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"series",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/series/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"series",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve series",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/series",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"series"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Series model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/series",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"series"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"assistido\": \"assistido\",\n  \"ano\": 6,\n  \"temporadas\": 1,\n  \"genero\": \"genero\",\n  \"nome\": \"nome\",\n  \"id\": 0,\n  \"produtora\": \"produtora\"\n },\n {\n  \"assistido\": \"assistido\",\n  \"ano\": 6,\n  \"temporadas\": 1,\n  \"genero\": \"genero\",\n  \"nome\": \"nome\",\n  \"id\": 0,\n  \"produtora\": \"produtora\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create serie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"assistido\": \"assistido\",\n    \"ano\": 6,\n    \"temporadas\": 1,\n    \"genero\": \"genero\",\n    \"nome\": \"nome\",\n    \"id\": 0,\n    \"produtora\": \"produtora\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/series",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"series"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Creat a Serie model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"assistido\": \"assistido\",\n    \"ano\": 6,\n    \"temporadas\": 1,\n    \"genero\": \"genero\",\n    \"nome\": \"nome\",\n    \"id\": 0,\n    \"produtora\": \"produtora\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/series",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"series"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"assistido\": \"assistido\",\n \"ano\": 6,\n \"temporadas\": 1,\n \"genero\": \"genero\",\n \"nome\": \"nome\",\n \"id\": 0,\n \"produtora\": \"produtora\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "livros",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve livro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/livros/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"livros",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"escritor\": \"escritor\",\n \"paginas\": 1,\n \"genero\": \"genero\",\n \"nome\": \"nome\",\n \"lido\": \"lido\",\n \"id\": 0,\n \"edicao\": 6,\n \"editora\": \"editora\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update livro",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"genero\": \"drama\",\n    \"escritor\": \"Fulano\",\n    \"lido\": \"nao\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/livros/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"livros",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"genero\": \"drama\",\n    \"escritor\": \"Fulano\",\n    \"lido\": \"nao\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"genero\": \"drama\",\n    \"escritor\": \"Fulano\",\n    \"lido\": \"nao\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"nome\": \"Exemplo 01\",\n    \"genero\": \"drama\",\n    \"escritor\": \"Fulano\",\n    \"lido\": \"nao\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete livro",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/livros/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"livros",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/livros/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"livros",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve livros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/livros",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"livros"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Livros model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/livros",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"livros"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"escritor\": \"escritor\",\n  \"paginas\": 1,\n  \"genero\": \"genero\",\n  \"nome\": \"nome\",\n  \"lido\": \"lido\",\n  \"id\": 0,\n  \"edicao\": 6,\n  \"editora\": \"editora\"\n },\n {\n  \"escritor\": \"escritor\",\n  \"paginas\": 1,\n  \"genero\": \"genero\",\n  \"nome\": \"nome\",\n  \"lido\": \"lido\",\n  \"id\": 0,\n  \"edicao\": 6,\n  \"editora\": \"editora\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create livro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"escritor\": \"escritor\",\n    \"paginas\": 1,\n    \"genero\": \"genero\",\n    \"nome\": \"nome\",\n    \"lido\": \"lido\",\n    \"id\": 0,\n    \"edicao\": 6,\n    \"editora\": \"editora\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/livros",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"livros"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Creat a Livro model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"escritor\": \"escritor\",\n    \"paginas\": 1,\n    \"genero\": \"genero\",\n    \"nome\": \"nome\",\n    \"lido\": \"lido\",\n    \"id\": 0,\n    \"edicao\": 6,\n    \"editora\": \"editora\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/livros",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"livros"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"escritor\": \"escritor\",\n \"paginas\": 1,\n \"genero\": \"genero\",\n \"nome\": \"nome\",\n \"lido\": \"lido\",\n \"id\": 0,\n \"edicao\": 6,\n \"editora\": \"editora\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cursos",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieve curso",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/cursos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cursos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"professor\": \"professor\",\n \"assistido\": \"assistido\",\n \"materia\": \"materia\",\n \"videos\": 6,\n \"id\": 0\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update curso",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"materia\": \"Exemplo 01\",\n    \"professor\": \"Fulano\",\n    \"assistido\": \"nao\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cursos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cursos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"materia\": \"Exemplo 01\",\n    \"professor\": \"Fulano\",\n    \"assistido\": \"nao\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"materia\": \"Exemplo 01\",\n    \"professor\": \"Fulano\",\n    \"assistido\": \"nao\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"materia\": \"Exemplo 01\",\n    \"professor\": \"Fulano\",\n    \"assistido\": \"nao\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete curso",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/cursos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cursos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/cursos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cursos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "basePath",
+													"value": "{{basePath}}"
+												},
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/cursos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cursos"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Cursos model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/cursos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cursos"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"professor\": \"professor\",\n  \"assistido\": \"assistido\",\n  \"materia\": \"materia\",\n  \"videos\": 6,\n  \"id\": 0\n },\n {\n  \"professor\": \"professor\",\n  \"assistido\": \"assistido\",\n  \"materia\": \"materia\",\n  \"videos\": 6,\n  \"id\": 0\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create curso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"professor\": \"professor\",\n    \"assistido\": \"assistido\",\n    \"materia\": \"materia\",\n    \"videos\": 6,\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cursos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cursos"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Creat a Curso model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"professor\": \"professor\",\n    \"assistido\": \"assistido\",\n    \"materia\": \"materia\",\n    \"videos\": 6,\n    \"id\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cursos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cursos"
+									],
+									"variable": [
+										{
+											"key": "basePath",
+											"value": "{{basePath}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"professor\": \"professor\",\n \"assistido\": \"assistido\",\n \"materia\": \"materia\",\n \"videos\": 6,\n \"id\": 0\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "basePath",
+			"value": "/",
+			"type": "any"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
